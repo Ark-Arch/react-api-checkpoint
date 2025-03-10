@@ -23,8 +23,12 @@ const UserList = () => {
                         <td>{person.email}</td>
                         <td>{person.phone}</td>
                         <td>{person.website}</td>
-                        <td>{person.company.name}<br/><KnowMore key={`company-${index}`} username={person.username} subject={'company'}/></td>
-                        <td>{person.address.city}<br/><KnowMore key={`company-${index}`} username={person.username} subject={'address'}/></td>
+                        <td>{person.company.name}<br/>
+                            <KnowMore key={`company-${index}`} username={person.username} subject={'company'} aboutCompany={person.company}/>
+                        </td>
+                        <td>{person.address.city}<br/>
+                            <KnowMore key={`address-${index}`} username={person.username} subject={'address'} aboutAddress={person.address}/>
+                        </td>
                     </tr>
                 ))
                 setList(data)

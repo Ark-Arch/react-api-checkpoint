@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from 'react'
+import KnowMoreTable from './KnowMoreTable'; 
 
-const KnowMore = ({username, subject})=> {
+const KnowMore = ({username, subject, aboutCompany, aboutAddress})=> {
     const modalId = `modal-${username}-${subject}`;
 
     return (
@@ -18,7 +19,7 @@ const KnowMore = ({username, subject})=> {
                         </div>
 
                         <div class="modal-body">
-                            IT IS WORKING!!!
+                            <KnowMoreTable subject={subject} aboutAddress={aboutAddress} aboutCompany={aboutCompany}/>
                         </div>
 
                         <div class="modal-footer">
