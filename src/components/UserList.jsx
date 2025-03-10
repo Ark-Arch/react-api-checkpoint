@@ -20,7 +20,7 @@ const UserList = () => {
                         <td>{person.username}</td>
                         <td>{person.name.split(' ')[0]}</td>
                         <td>{person.name.split(' ')[1]}</td>
-                        <td>{person.email}</td>
+                        <td>{person.email.toLowerCase()}</td>
                         <td>{person.phone}</td>
                         <td>{person.website}</td>
                         <td>{person.company.name}<br/>
